@@ -1,0 +1,11 @@
+{
+  "name": "Song Repo Extension",
+  "version": "1.0.0",
+  "desription": "An extension to store song tabs",
+  "manifest_version": 3,
+  "author": "Ali Shalabi",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Song Repo Extension"
+  }
+}
