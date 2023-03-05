@@ -14,6 +14,8 @@ function containsSubstring(string, substring){
 function checkWhitelist(string) {
   if (containsSubstring(string, "tabs.ultimate-guitar.com") == true) {
     return "Ultimate Guitar"
+  } else if (containsSubstring(string, "chordify.com") == true) {
+    return "Chordify"
   } else {
     return "Other"
   }
