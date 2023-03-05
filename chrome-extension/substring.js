@@ -1,4 +1,5 @@
 function containsSubstring(string, substring){
+
   const sub_length = substring.length
 
   for (let i = 0; i < (string.length - sub_length + 1); i++) {
@@ -7,9 +8,17 @@ function containsSubstring(string, substring){
       return true
     }
   }
-
   return false
 }
 
-console.log(containsSubstring("https://tabs.ultimate-guitar.com/tab/misc-soundtrack/a-mighty-wind-a-kiss-at-the-end-of-the-rainbow-chords-213444", "tabs.ultimate-guitar.com"))
-console.log(containsSubstring("https://tabs.ultimate-guitar.com/tab/misc-soundtrack/a-mighty-wind-a-kiss-at-the-end-of-the-rainbow-chords-213444", "tabs.ultimate-guitar.coms12"))
+function checkWhitelist(string) {
+  if (containsSubstring(string, "tabs.ultimate-guitar.com") == true) {
+    return "Ultimate Guitar"
+  } else {
+    return "Other"
+  }
+}
+
+
+console.log(checkWhitelist("https://tabs.ultimate-guitar.com/tab/misc-soundtrack/a-mighty-wind-a-kiss-at-the-end-of-the-rainbow-chords-213444"))
+console.log(checkWhitelist("https://apple.com/tab/misc-soundtrack/a-mighty-wind-a-kiss-at-the-end-of-the-rainbow-chords-213444"))
